@@ -22,6 +22,8 @@ from DjangoMedicalApp import views
 
 router=routers.DefaultRouter()
 router.register("company", views.CompanyViewSet, basename="company")
+router.register("companybank", views.CompanyBankViewSet, basename="companybank")
+
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/', include(router.urls)),

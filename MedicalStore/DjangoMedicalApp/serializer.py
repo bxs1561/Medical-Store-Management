@@ -1,10 +1,16 @@
-
 from rest_framework import serializers
 
-from DjangoMedicalApp.models import Company, CompanyBank,Medicine,MedicalDetails,Employee,Customer,CustomerRequest,Bill,BillDetails,CompanyAccount,EmployeeBank,EmployeeSalary
+from DjangoMedicalApp.models import Company, CompanyBank, Medicine, MedicalDetails, Employee, Customer, CustomerRequest, \
+    Bill, BillDetails, CompanyAccount, EmployeeBank, EmployeeSalary
 
 
 class CompanySerializer(serializers.ModelSerializer):
     class Meta:
-        model=Company
-        fields=["name","license_no","address","contact_no","email","description"]
+        model = Company
+        fields = "__all__"
+
+
+class CompanyBankSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = CompanyBank
+        fields = "__all__"

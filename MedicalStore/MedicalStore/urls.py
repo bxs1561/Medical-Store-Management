@@ -39,8 +39,8 @@ router.register("home_api",views.HomeApiViewset,basename="home_api")
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/', include(router.urls)),
-    path('api/gettoken',TokenObtainPairView.as_view(),name="gettoken"),
-    path('api/refresh_token', TokenRefreshView.as_view(), name="refresh_token"),
+    path('api/gettoken/',TokenObtainPairView.as_view(),name="gettoken"),
+    path('api/refresh_token/', TokenRefreshView.as_view(), name="refresh_token"),
     path('api/companybyname/<str:name>', CompanyNameViewSet.as_view(), name="companybyname"),
     path('api/medicinebyname/<str:name>', MedicineByNameViewSet.as_view(), name="medicinebyname"),
     path('api/companyonly/', CompanyOnlyViewSet.as_view(), name="companyonly"),
